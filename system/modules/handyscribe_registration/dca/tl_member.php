@@ -18,11 +18,10 @@ foreach ($GLOBALS['TL_DCA']['tl_member']['palettes'] as $k => $v) {
 /* Add fields to tl_user */
 $GLOBALS['TL_DCA']['tl_member']['fields']['ein'] = array
 (
-  'label'			=> &$GLOBALS['TL_LANG']['tl_member']['ein'],
-  'inputType'		=> 'text',
-  'eval'                	=> [
-    'mandatory'=>false,
-    'tl_class'=>'w50'
-  ],
-  'sql'                   => "varchar(255) NOT NULL default ''"
+    'search'                  => true,
+    'sorting'                 => true,
+    'flag'                    => DataContainer::SORT_INITIAL_LETTER_BOTH,
+    'inputType'               => 'text',
+    'eval'                    => array('mandatory'=>true, 'maxlength'=>255, 'feEditable'=>true, 'feViewable'=>true, 'feGroup'=>'personal', 'tl_class'=>'w50'),
+    'sql'                     => "varchar(255) NOT NULL default ''"
 );
