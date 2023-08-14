@@ -24,3 +24,5 @@ $GLOBALS['TL_DCA']['tl_member']['fields']['ein'] = array
     'eval'                    => array('mandatory'=>true, 'maxlength'=>255, 'feEditable'=>true, 'feViewable'=>true, 'feGroup'=>'personal', 'tl_class'=>'w50'),
     'sql'                     => "varchar(255) NOT NULL default ''"
 );
+$GLOBALS['TL_DCA']['tl_member']['fields']['phone']['eval']['mandatory'] = true;
+$GLOBALS['TL_DCA']['tl_member']['fields']['country']['eval']['mandatory'] = true;
