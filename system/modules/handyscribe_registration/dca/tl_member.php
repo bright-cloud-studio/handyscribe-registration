@@ -10,6 +10,8 @@
  * @license    http://opensource.org/licenses/lgpl-3.0.html
 **/
 
+use Contao\DataContainer;
+
  /* Extend the tl_user palettes */
 foreach ($GLOBALS['TL_DCA']['tl_member']['palettes'] as $k => $v) {
     $GLOBALS['TL_DCA']['tl_member']['palettes'][$k] = str_replace('groups;', 'groups;{handyscribe_legend},ein;', $v);
