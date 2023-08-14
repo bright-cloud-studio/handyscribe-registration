@@ -11,7 +11,7 @@
 **/
 
 /* Fields */
-$GLOBALS['TL_LANG']['tl_user']['ein']          = array('Employer Identification Number (EIN)', 'The EIN (Employer Identification Number) for this user.');
+$GLOBALS['TL_LANG']['tl_member']['ein']          = array('Employer Identification Number (EIN)', 'The EIN (Employer Identification Number) for this user.');
 
 /* Legends */
-$GLOBALS['TL_LANG']['tl_user']['handyscribe_legend'] = 'Handyscribe\'s Custom Fields';
+$GLOBALS['TL_LANG']['tl_member']['handyscribe_legend'] = 'Handyscribe\'s Custom Fields';
