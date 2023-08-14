@@ -15,7 +15,7 @@ foreach ($GLOBALS['TL_DCA']['tl_member']['palettes'] as $k => $v) {
     $GLOBALS['TL_DCA']['tl_member']['palettes'][$k] = str_replace('groups;', 'groups;{handyscribe_legend},ein;', $v);
 }
 
-/* Add fields to tl_user */
+/* Add our new field 'ein' */
 $GLOBALS['TL_DCA']['tl_member']['fields']['ein'] = array
 (
     'search'                  => true,
@@ -24,5 +24,6 @@ $GLOBALS['TL_DCA']['tl_member']['fields']['ein'] = array
     'eval'                    => array('mandatory'=>true, 'maxlength'=>255, 'feEditable'=>true, 'feViewable'=>true, 'feGroup'=>'personal', 'tl_class'=>'w50'),
     'sql'                     => "varchar(255) NOT NULL default ''"
 );
+/* Modify the existing DCA to make these fields mandatory */
 $GLOBALS['TL_DCA']['tl_member']['fields']['phone']['eval']['mandatory'] = true;
 $GLOBALS['TL_DCA']['tl_member']['fields']['country']['eval']['mandatory'] = true;
